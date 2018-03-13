@@ -1,0 +1,106 @@
+ .thdrcell {
+            background:#F3F0E7;
+            font-family:arial;
+            font-size:12px;
+            font-weight:bold;
+            padding:5px;
+            border-bottom:1px solid #C8BA92;
+			z-index:100000000;
+         }
+         
+         .tdatacell {
+            font-family:arial;
+            font-size:12px;
+            padding:5px;
+            background:#FFFFFF
+			z-index:100000000;
+         }
+         
+         .dvhdr1 {
+            background:#F3F0E7;
+            font-family:arial;
+            font-size:12px;
+            font-weight:bold;
+            border:1px solid #C8BA92;
+            padding:5px;
+			z-index:100000000;
+         }
+         
+         .dvbdy1 {
+            background:#FFFFFF;
+            font-family:arial;
+            font-size:12px;
+            border-left:1px solid #C8BA92;
+            border-right:1px solid #C8BA92;
+            border-bottom:1px solid #C8BA92;
+            padding:5px;
+			z-index:100000000;
+           
+         }
+		 .dvhdr1fix {
+            background:#F3F0E7;
+            font-family:arial;
+            font-size:12px;
+            font-weight:bold;
+            border:1px solid #C8BA92;
+            padding:5px;
+			width:300px;
+			z-index:100000000;
+            
+         }
+         
+         .dvbdy1fix {
+            background:#FFFFFF;
+            font-family:arial;
+            font-size:12px;
+            border-left:1px solid #C8BA92;
+            border-right:1px solid #C8BA92;
+            border-bottom:1px solid #C8BA92;
+            padding:5px;
+			z-index:100000000;
+            width:300px;
+         }
+         
+         p {
+         margin-top:20px;
+         }
+         
+         
+         
+         .dogvdvhdr {
+            width:300;
+            background:#C4D5E3;
+            border:1px solid #C4D5E3;
+			z-index:100000000;
+            font-weight:bold;
+            padding:10px;
+         }
+         
+         .dogvdvbdy {
+            width:300;
+            background:#FFFFFF;
+            border-left:1px solid #C4D5E3;
+            border-right:1px solid #C4D5E3;
+            border-bottom:1px solid #C4D5E3;
+			z-index:100000000;
+            padding:10px;
+         }
+         
+         .pgdiv {
+         width:320;
+         height:250;
+         background:#E9EFF4;
+         border:1px solid #C4D5E3;
+         padding:10px;
+         margin-bottom:20;
+         font-family:arial;
+			z-index:100000000;
+         font-size:12px;
+         }
+		 
+		 .inputimage {
+        border: 0px solid #ffffff;
+		background-color:#EDF3F7;
+			z-index:100000000;
+      
+}

@@ -1,0 +1,30 @@
+[06-Jun-2017 02:48:37 America/Chicago] PHP Notice:  Use of undefined constant _SITE_URL_ - assumed '_SITE_URL_' in /home/finefabrics/public_html/inc/mail-formate-util.php on line 100
+[06-Jun-2017 02:48:37 America/Chicago] PHP Notice:  Use of undefined constant _SITE_URL_ - assumed '_SITE_URL_' in /home/finefabrics/public_html/inc/mail-formate-util.php on line 100
+[06-Jun-2017 02:48:37 America/Chicago] PHP Notice:  Use of undefined constant _SITE_URL_ - assumed '_SITE_URL_' in /home/finefabrics/public_html/inc/mail-formate-util.php on line 100
+[06-Jun-2017 02:48:37 America/Chicago] PHP Notice:  Use of undefined constant _SITE_URL_ - assumed '_SITE_URL_' in /home/finefabrics/public_html/inc/mail-formate-util.php on line 100
+[06-Jun-2017 02:48:37 America/Chicago] PHP Notice:  Use of undefined constant _SITE_URL_ - assumed '_SITE_URL_' in /home/finefabrics/public_html/inc/mail-formate-util.php on line 121
+[06-Jun-2017 02:48:37 America/Chicago] PHP Notice:  Use of undefined constant _SITE_URL_ - assumed '_SITE_URL_' in /home/finefabrics/public_html/inc/mail-formate-util.php on line 122
+[06-Jun-2017 02:48:37 America/Chicago] PHP Notice:  Use of undefined constant _SITE_URL_ - assumed '_SITE_URL_' in /home/finefabrics/public_html/inc/mail-formate-util.php on line 125
+[06-Jun-2017 02:48:37 America/Chicago] PHP Notice:  Use of undefined constant _SITE_URL_ - assumed '_SITE_URL_' in /home/finefabrics/public_html/inc/mail-formate-util.php on line 126
+[06-Jun-2017 02:48:37 America/Chicago] PHP Notice:  Use of undefined constant _SITE_URL_ - assumed '_SITE_URL_' in /home/finefabrics/public_html/inc/mail-formate-util.php on line 127
+[06-Jun-2017 02:48:37 America/Chicago] PHP Notice:  Use of undefined constant _SITE_URL_ - assumed '_SITE_URL_' in /home/finefabrics/public_html/inc/mail-formate-util.php on line 128
+[06-Jun-2017 02:48:37 America/Chicago] PHP Notice:  Use of undefined constant _SITE_URL_ - assumed '_SITE_URL_' in /home/finefabrics/public_html/inc/mail-formate-util.php on line 20
+[06-Jun-2017 02:48:37 America/Chicago] PHP Notice:  Use of undefined constant _SITE_URL_ - assumed '_SITE_URL_' in /home/finefabrics/public_html/inc/mail-formate-util.php on line 22
+[06-Jun-2017 02:48:37 America/Chicago] PHP Notice:  Use of undefined constant _SITE_URL_ - assumed '_SITE_URL_' in /home/finefabrics/public_html/inc/mail-formate-util.php on line 30
+[06-Jun-2017 02:48:37 America/Chicago] PHP Notice:  Use of undefined constant _SITE_URL_ - assumed '_SITE_URL_' in /home/finefabrics/public_html/inc/mail-formate-util.php on line 36
+[06-Jun-2017 02:48:37 America/Chicago] PHP Notice:  Use of undefined constant _SITE_URL_ - assumed '_SITE_URL_' in /home/finefabrics/public_html/inc/mail-formate-util.php on line 42
+[06-Jun-2017 02:48:37 America/Chicago] PHP Notice:  Use of undefined constant _SITE_URL_ - assumed '_SITE_URL_' in /home/finefabrics/public_html/inc/mail-formate-util.php on line 45
+[23-Sep-2017 02:14:14 America/Chicago] PHP Warning:  include_once(ffheader.php): failed to open stream: No such file or directory in /home/finefabrics/public_html/index.php on line 19
+[23-Sep-2017 02:14:14 America/Chicago] PHP Warning:  include_once(): Failed opening 'ffheader.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home/finefabrics/public_html/index.php on line 19
+[23-Sep-2017 02:15:34 America/Chicago] PHP Warning:  include_once(ffheader.php): failed to open stream: No such file or directory in /home/finefabrics/public_html/index.php on line 19
+[23-Sep-2017 02:15:34 America/Chicago] PHP Warning:  include_once(): Failed opening 'ffheader.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home/finefabrics/public_html/index.php on line 19
+[07-Mar-2018 04:53:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_pconnect() in /home/finefabrics/public_html/inc/database.inc.php:42
+Stack trace:
+#0 /home/finefabrics/public_html/dynd.php(22): Database->open()
+#1 {main}
+  thrown in /home/finefabrics/public_html/inc/database.inc.php on line 42
+[07-Mar-2018 05:55:42 UTC] PHP Catchable fatal error:  Object of class mysqli could not be converted to string in /home/finefabrics/public_html/inc/database.inc.php on line 51
+[07-Mar-2018 05:57:10 UTC] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, string given in /home/finefabrics/public_html/inc/database.inc.php on line 53
+[07-Mar-2018 06:00:35 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; SMTP has a deprecated constructor in /home/finefabrics/public_html/inc/class.smtp.php on line 24
+[07-Mar-2018 21:42:40 UTC] PHP Warning:  fsockopen(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/finefabrics/public_html/inc/class.smtp.php on line 105
+[07-Mar-2018 21:42:40 UTC] PHP Warning:  fsockopen(): unable to connect to mail.finefabrics.ca:25 (php_network_getaddresses: getaddrinfo failed: Name or service not known) in /home/finefabrics/public_html/inc/class.smtp.php on line 105

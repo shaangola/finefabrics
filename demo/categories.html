@@ -1,0 +1,1260 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Fine Fabrics</title>
+     <link href="css/bootstrap.css" rel="stylesheet">
+     <link href="css/smoothproducts.css" rel="stylesheet">
+     <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/product.css">
+     <link href="css/style.css" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext" rel="stylesheet">-->
+     <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- <link href="css/font.css" rel="stylesheet">-->
+
+  </head>
+  <style>
+  .modal-open{padding:0 !important}
+  </style><!-- class="body-black"-->
+  <body>
+
+<header>
+		
+        <div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+
+    <div class="navbar-header">
+      <div class="navbar-brand"><a class="text-hide" href="index.php"><img src="images/logo.png" alt="Fine Fabrics" class="img-responsive"> </a></div>
+      <button class="navbar-toggle" data-toggle="collapse" data-target=".btnCollapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse btnCollapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="#">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Style<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="categories.html">ANARKALI</a></li>
+            <li><a href="#">ANARKALI SUIT</a></li>
+            <li><a href="#">BRIDAL LEHANGA</a></li>
+            <li><a href="#">DRAPED SAREE</a></li>
+            <li><a href="#">GOWNS</a></li>
+             <li><a href="#">LEHANGA</a></li>
+              <li><a href="#">SAREE</a></li>
+               <li><a href="#">SALWAR KAMEEZ</a></li>
+          </ul>
+         </li>
+         
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Occation<span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="#">COCKTAIL</a></li>
+            <li><a href="#">DINNER PARTY</a></li>
+            <li><a href="#">MEHENDI</a></li>
+            <li><a href="#">POOJA</a></li>
+            <li><a href="#">RECEPTION</a></li>
+             <li><a href="#">RECEPTION ROKA</a></li>
+              <li><a href="#">ROKA</a></li>
+               <li><a href="#">SANGEET</a></li>
+          </ul>
+        </li>
+        
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Role<span class="caret"></span></a>
+        <ul class="dropdown-menu col-md-push-2" role="menu">
+            <li><a href="#">ANARKALI</a></li>
+            <li><a href="#">ANARKALI SUIT</a></li>
+            <li><a href="#">BRIDAL LEHANGA</a></li>
+            <li><a href="#">DRAPED SAREE</a></li>
+            <li><a href="#">GOWNS</a></li>
+             <li><a href="#">LEHANGA</a></li>
+              <li><a href="#">SAREE</a></li>
+               <li><a href="#">SALWAR KAMEEZ</a></li>
+          </ul>
+        </li>
+        
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Type Of Wedding<span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="#">ANARKALI</a></li>
+            <li><a href="#">ANARKALI SUIT</a></li>
+            <li><a href="#">BRIDAL LEHANGA</a></li>
+            <li><a href="#">DRAPED SAREE</a></li>
+            <li><a href="#">GOWNS</a></li>
+             <li><a href="#">LEHANGA</a></li>
+              <li><a href="#">SAREE</a></li>
+               <li><a href="#">SALWAR KAMEEZ</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+  </div>
+  <!-- end container -->
+</div>
+<!-- end navbar navbar-inverse navbar-static-top -->
+
+		
+	</header> <!-- header end -->
+    
+<!-- =================model popup=========================================-->
+ 
+ 
+<!--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="padding-left:0px !important">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Subscribe</h4>
+        <h5>SUBSCRIBE WITH US TO RECEIVE AN ADDITIONAL 10% OFF.</h5>
+         <h5>KINDLY VISIT US IN-STORE, ON-LINE SHOPPING COMING SOON.</h5>
+        </div>
+        <div class="modal-body">
+        
+        <img src="images/sales.jpg" class="img-responsive" alt="">
+        
+        <div class="row">
+        <div style="padding:0px 20px">
+        <div class="pdding-top30">
+        <form id="subs_lbform" method="post" action="dynd.php">
+        
+        <div class="form-group col-md-5">
+        <div>
+        <input type="text" id="subscriber_name" name="subscriber_name" placeholder="Your name.." class="form-control" required>
+        </div>
+        </div> 
+        <div class="form-group col-md-5">  
+        <div>
+        <input type="email" name="subscriber_email" id="subscriber_email" placeholder="Sign up for your email.." class="form-control" required>
+        </div>
+        </div>  
+        <div class="col-md-2">  
+        <div>
+        <input  type="submit" value="Sign Up" class="themes-button">
+        </div>
+        </div>
+        <div class="col-md-12"><div id="ackdiv"></div></div>
+        <input type="hidden" name="qry" id="qry" value="subscription">
+        </form>
+        </div>
+        </div>
+        </div>
+        
+        </div>
+        </div>
+    </div>
+    </div>
+  </div>-->
+ <!-- =================model popup End=========================================-->   
+
+<!--=================================================================slider -section--=============================================================================-->
+
+
+<!--=================================================================slider -section- Close-=============================================================================-->
+
+<section class="pdding-top80">
+<!--===============headdin start============================-->
+<!--<div class="tittle-heading">
+<h1>Our Selection</h1>
+<div class="heading-bar"></div>
+</div>-->
+<!--===============headdin end============================-->
+<div class="modal fade product_view" id="product_view">
+<div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+ <button type="button" class="close" data-dismiss="modal">&times;</button>
+<!-- <h4 class="modal-title">Modal Header</h4>-->
+ </div>
+            <div class="modal-body">
+               <div class="row">
+               <div class="col-xs-12 col-md-5">
+                	<div class="page">
+		<div class="sp-loading"><img src="images/sp-loading.gif" alt=""><br>LOADING IMAGES</div>
+		<div class="sp-wrap">
+			<a href="images/zoom1.jpg"><img src="images/zoom1.jpg" alt=""></a>
+			<a href="images/zoom1_left.jpg"><img src="images/zoom1_left.jpg" alt=""></a>
+			<a href="images/zoom1_back.jpg"><img src="images/zoom1_back.jpg" alt=""></a>
+
+		</div>
+
+		
+	</div>
+                
+                
+                </div>
+                <div class="col-xs-12 col-md-7 padding-rtl20" style="border:0px solid gray">
+                <div style="border:1px solid #d8d8d8; position:relative;">
+                <div class="row">
+                <div class="col-md-12 padding-btop20 padding-rtl30"><h4>PINK ANARKALI WITH SPECTRUM LEHENGA</h4></div>
+                
+                </div>
+                <div class="clear"></div>
+                  <div class="padding-bot10 padding-rtl20" style="border-top:1px solid #dadada;">  
+					<div class="margin-top20">
+                    <small>Be the first to review this product</small>
+                    
+                    <h3 class="margin-top20">U$S 399</h3>
+                    <h5 style="color:#f44336;" class="margin-btop20">Availability: In stock</h5>
+        			<small>JC-7055</small>
+                    </div>
+        			
+        <div class="row">
+        <div class="col-md-5 col-sm-6">
+                    <div class="section">
+                        <div class=" padding-btop20">
+                            <div class="btn-minus"><span class="glyphicon glyphicon-minus"></span></div>
+                            <input value="1">
+                            <div class="btn-plus"><span class="glyphicon glyphicon-plus"></span></div>
+                        </div>
+                    </div>                
+        </div>
+                    <!-- Botones de compra -->
+           <div class="col-md-7 col-sm-6 padding-btop20">
+           
+					<div class="col_list">
+					<ul>
+					<li><a href="#" class="hidden-sm addcart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
+					<i class="glyphicon glyphicon-shopping-cart"></i>
+					</a></li>
+					<li><a href="#" class="hidden-sm whislist" data-toggle="tooltip" data-placement="top" title="Add to wish list"><i class="fa fa-heart-o"></i></a></li>
+					<li><a href="#" class="hidden-sm compare" data-toggle="tooltip" data-placement="top" title="Compare"><i class="fa fa-exchange"></i></a></li>
+					</ul>
+					</div>
+                </div>                              
+        </div>
+        </div>
+        </div>
+         
+            </div>                              
+        
+              	
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="padding-btop40 gray_bg">
+<div class="container">
+    <div class="row">
+    
+    <div class="col-lg-3 col-md-3">
+<div class="panel-group" id="accordion" style="border:1px solid #e8e8e8; background:#FFF;">
+ <div class="accordion-option">
+    <h3 class="title">Categories</h3>
+   <!-- <a href="javascript:void(0)" class="toggle-accordion active" accordion-id="#accordion"></a>-->
+  </div>
+  <div class="clearfix"></div>
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingOne">
+        <h4 class="header-item">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+         Style
+        </a>
+      </h4>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+       <div class="panel-body">
+        <div class="iterm_acodien">
+        <ul>
+        <li><a href="">ANARKALI</a></li>
+        <li><a href="">ANARKALI SUIT</a></li>
+        <li><a href="">BRIDAL LEHANGA</a></li>
+        <li><a href="">DRAPED SAREE</a></li>
+        <li><a href="">GOWNS</a></li>
+        <li><a href="">LEHANGA</a></li>
+        <li><a href="">SAREE</a></li>
+        <li><a href="">SALWAR KAMEEZ</a></li>
+
+        </ul>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingTwo">
+        <h4 class="header-item">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          Size
+        </a>
+      </h4>
+      </div>
+      <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+        <div class="panel-body">
+         <div class="level_col padding-btop10">
+<!-- <div class="header-item">Size</div>-->
+  <div class="form-group">
+    <div class="custom-checkbox">
+    <input type="checkbox" id="cb1">
+    <label for="cb1">3XS</label>
+    </div>
+  </div>
+  
+     <div class="form-group">
+    <div class="custom-checkbox">
+    <input type="checkbox" id="cb2">
+    <label for="cb2">2XS</label>
+    </div>
+  </div>
+
+<div class="form-group">
+    <div class="custom-checkbox">
+    <input type="checkbox" id="cb3">
+    <label for="cb3">XS</label>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <div class="custom-checkbox">
+    <input type="checkbox" id="cb4">
+    <label for="cb4">S</label>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <div class="custom-checkbox">
+    <input type="checkbox" id="cb5">
+    <label for="cb5">M</label>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <div class="custom-checkbox">
+    <input type="checkbox" id="cb6">
+    <label for="cb6">L</label>
+    </div>
+  </div>
+
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingThree">
+        <h4 class="header-item">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+        Price
+        </a>
+      </h4>
+      </div>
+      <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+        <div class="panel-body">
+          <div class="level_col">
+<!--  <h4>Prize</h4>
+  <div class="progress">
+  <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="button_left"></div>
+  <div class="button_right"></div>
+</div>-->
+<div class="menu-price menu-item">
+           <!-- <div class="header-item">Price</div>-->
+            <p class="margin0 padding-bot20">
+                <!--<label for="amount">Price range:</label>-->
+                <input type="text" readonly="" id="amount" style="border:0; color:#f6931f; font-weight:bold;">
+            </p>
+            <div id="slider-range" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"><div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 19%; width: 53.8%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 19%;"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 72.8%;"></span><div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 19%; width: 53.8%;"></div></div>
+    <!-- row requires "row-divided" class -->
+    <div class="clear"></div>
+    <div class="row row-divided margin-btop20">
+        <div class="col-xs-6 column-one  padding-btop20 margin-btop20">
+           <select class="form-control input_control" name="">
+           <option>Min</option>
+           <option><i class="fa fa-inr" aria-hidden="true"></i> 1000</option>
+           <option>र 2000</option>
+           <option>र 3000</option>
+           </select>
+        </div>
+      	<div class="vertical-divider">to</div>
+    	<div class="col-xs-6 column-two padding-btop20 margin-btop20">
+           <select class="form-control input_control" name="">
+           <option>र 500</option>
+           <option>र 1000</option>
+           <option>र 1500</option>
+           <option>र 2000</option>
+           <option>र 3000+</option>
+           </select>
+    	</div>
+    </div>
+     <!-- row requires "row-divided" class end -->
+</div>
+
+
+  </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingThree">
+        <h4 class="header-item">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+          Color
+        </a>
+      </h4>
+      </div>
+      <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+        <div class="panel-body">
+          <div class="padding-btop10 level_col">
+ <!--<div class="header-item">Color</div>-->
+  <div class="form-group"><button class="btn_transparent"><i class="fa fa-close"></i> Clear All</button></div>
+  <div class="form-group">
+    <div class="custom-checkbox">
+    <input type="checkbox" id="cb8">
+    <label for="cb8">
+    <div><span class="black"></span> Black</div>
+    </label>
+    
+    </div>
+    
+  </div>
+  
+     <div class="form-group">
+    <div class="custom-checkbox">
+    <input type="checkbox" id="cb9">
+    <label for="cb9"><div><span class="Beige"></span> Beige</div></label>
+    </div>
+  </div>
+
+<div class="form-group">
+    <div class="custom-checkbox">
+    <input type="checkbox" id="cb10">
+    <label for="cb10"><div><span class="Blue"></span> Blue</div></label>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <div class="custom-checkbox">
+    <input type="checkbox" id="cb11">
+    <label for="cb11"><div><span class="Brown"></span> Brown</div></label>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <div class="custom-checkbox">
+    <input type="checkbox" id="cb12">
+    <label for="cb12"><div><span class="dark_Blue"></span> Dark Blue</div></label>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <div class="custom-checkbox">
+    <input type="checkbox" id="cb13">
+    <label for="cb13"><div><span class="dark_green"></span> Dark Green</div></label>
+    </div>
+  </div>
+
+  </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+<!--<div><h3>Categories</h3></div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+   <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          Style <span class="glyphicon glyphicon-minus minus"></span>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in">
+      <div class="panel-body">
+        <div class="iterm_acodien">
+        <ul>
+        <li><a href="">ANARKALI</a></li>
+        <li><a href="">ANARKALI SUIT</a></li>
+        <li><a href="">BRIDAL LEHANGA</a></li>
+        <li><a href="">DRAPED SAREE</a></li>
+        <li><a href="">GOWNS</a></li>
+        <li><a href="">LEHANGA</a></li>
+        <li><a href="">SAREE</a></li>
+        <li><a href="">SALWAR KAMEEZ</a></li>
+
+        </ul>
+        </div>
+      </div>
+    </div>
+  </div>-->
+  
+  
+  <!--<div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+          OCCASION  <span class="glyphicon glyphicon-plus"></span>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div class="iterm_acodien">
+        <ul>
+        <li><a href="">ANARKALI</a></li>
+        <li><a href="">ANARKALI SUIT</a></li>
+        <li><a href="">BRIDAL LEHANGA</a></li>
+        <li><a href="">DRAPED SAREE</a></li>
+        <li><a href="">GOWNS</a></li>
+        <li><a href="">LEHANGA</a></li>
+        <li><a href="">SAREE</a></li>
+        <li><a href="">SALWAR KAMEEZ</a></li>
+
+        </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+          <span class="glyphicon glyphicon-plus"></span>
+          ROLE
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse">
+      <div class="panel-body">
+       <div class="iterm_acodien">
+        <ul>
+        <li><a href="">ANARKALI</a></li>
+        <li><a href="">ANARKALI SUIT</a></li>
+        <li><a href="">BRIDAL LEHANGA</a></li>
+        <li><a href="">DRAPED SAREE</a></li>
+        <li><a href="">GOWNS</a></li>
+        <li><a href="">LEHANGA</a></li>
+        <li><a href="">SAREE</a></li>
+        <li><a href="">SALWAR KAMEEZ</a></li>
+
+        </ul>
+        </div>
+      </div>
+    </div>
+  </div>-->
+  <!--color box start-->
+  
+  
+  
+ 
+<!--color Box end-->
+  
+  
+  
+  
+  
+</div>
+	</div>
+    
+    
+	
+	<div class="col-lg-9 col-md-9">
+    <!--<div class="strip">
+    <div class="row">
+    <div class="col-md-12">
+      <ul class="navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">SORT BY: STYLE<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Position</a></li>
+            <li><a href="#">SIZE</a></li>
+            <li><a href="#">STYLE</a></li>
+            <li><a href="#">COLOR</a></li>
+             <li><a href="#">Name</a></li>
+              <li><a href="#">Price</a></li>
+          </ul>
+        </li>
+        
+              <li class="dropdown"><a href="" data-toggle="tooltip" data-placement="top" title="Ser Sccending Direction"><i class="fa  fa-arrow-down"></i></a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">150 ITEMS/PAGE<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Position</a></li>
+            <li><a href="#">SIZE</a></li>
+            <li><a href="#">STYLE</a></li>
+            <li><a href="#">COLOR</a></li>
+             <li><a href="#">Name</a></li>
+              <li><a href="#">Price</a></li>
+          </ul>
+        </li>
+      </ul>
+
+           <ul class="navbar-nav navbar-right">
+        <li class="dropdown active"><a href="" data-toggle="tooltip" data-placement="top" title="Grid"><i class="fa fa-th"></i></a></li>
+         <li class="dropdown"><a href="" data-toggle="tooltip" data-placement="top" title="List"><i class="fa fa-list"></i></a></li>
+      </ul>
+      
+      
+      </div>
+
+      </div>
+    </div>-->
+    <div class="clear clearfix"></div>
+    <div class="masonry">
+        
+  <div class="items">
+        <div data-price="290" class="item">
+            <article class="col-item">
+		<div class="photo">
+			<a href="index.html"> <img src="images/lehnga1.jpg" alt="img12" class="img-responsive"> </a>
+            <div class="zoo_out">
+            <div class="zoom1">
+            <a href="#" class="hidden-sm" data-target="#product_view" data-toggle="modal" data-placement="top" title="Add to wish list">
+            <i class="fa fa-search-plus"></i></a></div>
+            </div>
+		</div>
+		<div class="info">
+			<div class="row">
+				<div class="price-details col-md-6">
+					<p class="details">
+						Lorem ipsum dolor sit amet, consectetur..
+					</p>
+					<h2>IVORY &amp; ORANGE LEHENGA WITH SHIFT CHOLI</h2>
+					<!--<span class="price-new">$110.00</span>-->
+				</div>
+			</div>
+			<div class="separator clear-left">
+				<p class="btn-add padding-btop20">
+					<a href="#" data-toggle="modal" data-target="#product_view" class="hidden-sm"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+				</p>
+				<p class="btn-details padding-btop20">
+					<a href="#" class="hidden-sm" data-toggle="tooltip" data-placement="top" title="Add to wish list"><i class="fa fa-heart-o"></i></a>
+					<a href="#" class="hidden-sm" data-toggle="tooltip" data-placement="top" title="Compare"><i class="fa fa-exchange"></i></a>
+				</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		</article>
+        </div>
+        <div data-price="900" class="item">
+            <article class="col-item">
+		<div class="photo">
+			<a href="#"> <img src="images/lehnga4.jpg" alt="img12" class="img-responsive"> </a>
+            <div class="zoo_out">
+            <div class="zoom1">
+            <a href="#" data-toggle="modal" data-target="#product_view" class="hidden-sm" data-placement="top" title="Add to wish list">
+            <i class="fa fa-search-plus"></i></a></div>
+            </div>
+		</div>
+		<div class="info">
+			<div class="row">
+				<div class="price-details col-md-6">
+					<p class="details">
+						Lorem ipsum dolor sit amet, consectetur..
+					</p>
+					<h2>IVORY &amp; GOLD ANARKALI GOWN WITH BUTTON DETAILING</h2>
+					<!--<span class="price-new">$110.00</span>-->
+				</div>
+			</div>
+			<div class="separator clear-left">
+				<p class="btn-add padding-btop20">
+					<a href="#" class="hidden-sm"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+				</p>
+				<p class="btn-details padding-btop20">
+					<a href="#" class="hidden-sm" data-toggle="tooltip" data-placement="top" title="Add to wish list"><i class="fa fa-heart-o"></i></a>
+					<a href="#" class="hidden-sm" data-toggle="tooltip" data-placement="top" title="Compare"><i class="fa fa-exchange"></i></a>
+				</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		</article>
+        </div>
+        <div data-price="600" class="item">
+            <article class="col-item">
+		<div class="photo">
+			<a href="#"> <img src="images/lehnga6.jpg" alt="img12" class="img-responsive"> </a>
+            <div class="zoo_out">
+            <div class="zoom1">
+            <a href="#" data-toggle="modal" data-target="#product_view" class="hidden-sm" data-placement="top" title="Add to wish list">
+            <i class="fa fa-search-plus"></i></a></div>
+            </div>
+		</div>
+		<div class="info">
+			<div class="row">
+				<div class="price-details col-md-6">
+					<p class="details">
+						Lorem ipsum dolor sit amet, consectetur..
+					</p>
+					<h2>BLUE GRADIENT DRAPE SAREE WITH SWARVOSKI BODICE</h2>
+					<!--<span class="price-new">$110.00</span>-->
+				</div>
+			</div>
+			<div class="separator clear-left">
+				<p class="btn-add padding-btop20">
+					<a href="#" class="hidden-sm"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+				</p>
+				<p class="btn-details padding-btop20">
+					<a href="#" class="hidden-sm" data-toggle="tooltip" data-placement="top" title="Add to wish list"><i class="fa fa-heart-o"></i></a>
+					<a href="#" class="hidden-sm" data-toggle="tooltip" data-placement="top" title="Compare"><i class="fa fa-exchange"></i></a>
+				</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		</article>
+        </div>
+         <div data-price="457" class="item">
+           <article class="col-item">
+		<div class="photo">
+			<a href="#"> <img src="images/lehnga2.jpg" alt="img12" class="img-responsive"> </a>
+            <div class="zoo_out">
+            <div class="zoom1">
+            <a href="#" data-toggle="modal" data-target="#product_view" class="hidden-sm" data-placement="top" title="Add to wish list">
+            <i class="fa fa-search-plus"></i></a></div>
+            </div>
+		</div>
+		<div class="info">
+			<div class="row">
+				<div class="price-details col-md-6">
+					<p class="details">
+						Lorem ipsum dolor sit amet, consectetur..
+					</p>
+					
+					<h2>RED REGALIA Pink Anarkali LEHENGA</h2>
+					<!--<span class="price-new">$110.00</span>-->
+				</div>
+			</div>
+			<div class="separator clear-left">
+				<p class="btn-add padding-btop20">
+					<a href="#" class="hidden-sm"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+				</p>
+				<p class="btn-details padding-btop20">
+				
+					<a href="#" class="hidden-sm" data-toggle="tooltip" data-placement="top" title="Add to wish list"><i class="fa fa-heart-o"></i></a>
+					<a href="#" class="hidden-sm" data-toggle="tooltip" data-placement="top" title="Compare"><i class="fa fa-exchange"></i></a>
+				</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		</article>
+        </div>
+         <div data-price="674" class="item">
+           <article class="col-item">
+		<div class="photo">
+			<a href="#"> <img src="images/lehnga8.jpg" alt="img12" class="img-responsive"> </a>
+            <div class="zoo_out">
+            <div class="zoom1">
+            <a href="#" data-toggle="modal" data-target="#product_view" class="hidden-sm" data-placement="top" title="Add to wish list">
+            <i class="fa fa-search-plus"></i></a></div>
+            </div>
+		</div>
+		<div class="info">
+			<div class="row">
+				<div class="price-details col-md-6">
+					<p class="details">
+						Lorem ipsum dolor sit amet, consectetur..
+					</p>
+					<h2>BLUE AND IVORY ANARKALI LEHENGA</h2>
+					<!--<span class="price-new">$110.00</span>-->
+				</div>
+			</div>
+			<div class="separator clear-left">
+				<p class="btn-add padding-btop20">
+					<a href="#" class="hidden-sm"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+				</p>
+				<p class="btn-details padding-btop20">
+					<a href="#" class="hidden-sm" data-toggle="tooltip" data-placement="top" title="Add to wish list"><i class="fa fa-heart-o"></i></a>
+					<a href="#" class="hidden-sm" data-toggle="tooltip" data-placement="top" title="Compare"><i class="fa fa-exchange"></i></a>
+				</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		</article>
+        </div>
+         <div data-price="315" class="item">
+            <article class="col-item">
+		<div class="photo">
+			<a href="#"> <img src="images/lehnga7.jpg" alt="img12" class="img-responsive"> </a>
+            <div class="zoo_out">
+            <div class="zoom1">
+            <a href="#" data-toggle="modal" data-target="#product_view" class="hidden-sm" data-placement="top" title="Add to wish list">
+            <i class="fa fa-search-plus"></i></a></div>
+            </div>
+		</div>
+		<div class="info">
+			<div class="row">
+				<div class="price-details col-md-6">
+					<p class="details">
+						Lorem ipsum dolor sit amet, consectetur..
+					</p>
+					<h2>BLUE FRILL COCKTAIL DRESS with Gowns</h2>
+					<!--<span class="price-new">$110.00</span>-->
+				</div>
+			</div>
+			<div class="separator clear-left">
+				<p class="btn-add padding-btop20">
+					<a href="#" class="hidden-sm"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+				</p>
+				<p class="btn-details padding-btop20">
+					<a href="#" class="hidden-sm" data-toggle="tooltip" data-placement="top" title="Add to wish list"><i class="fa fa-heart-o"></i></a>
+					<a href="#" class="hidden-sm" data-toggle="tooltip" data-placement="top" title="Compare"><i class="fa fa-exchange"></i></a>
+				</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		</article>
+        </div>
+         <div data-price="987" class="item">
+            <article class="col-item">
+		<div class="photo">
+			<a href="#"> <img src="images/lehnga3.jpg" alt="img12" class="img-responsive"> </a>
+            <div class="zoo_out">
+            <div class="zoom1">
+            <a href="#" data-toggle="modal" data-target="#product_view" class="hidden-sm" data-placement="top" title="Add to wish list">
+            <i class="fa fa-search-plus"></i></a></div>
+            </div>
+		</div>
+		<div class="info">
+			<div class="row">
+				<div class="price-details col-md-6">
+					<p class="details">
+						Lorem ipsum dolor sit amet, consectetur..
+					</p>
+					<h2>BLOW GOWN WITH IVORY BODICE Dress</h2>
+					<!--<span class="price-new">$110.00</span>-->
+				</div>
+			</div>
+			<div class="separator clear-left">
+				<p class="btn-add padding-btop20">
+					<a href="#" class="hidden-sm"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+				</p>
+				<p class="btn-details padding-btop20">
+					<a href="#" class="hidden-sm" data-toggle="tooltip" data-placement="top" title="Add to wish list"><i class="fa fa-heart-o"></i></a>
+					<a href="#" class="hidden-sm" data-toggle="tooltip" data-placement="top" title="Compare"><i class="fa fa-exchange"></i></a>
+				</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		</article>
+        </div>
+         <div data-price="777" class="item">
+            <article class="col-item">
+		<div class="photo">
+			<a href="#"> <img src="images/lehnga5.jpg" alt="img12" class="img-responsive"> </a>
+            <div class="zoo_out">
+            <div class="zoom1">
+            <a href="#" data-toggle="modal" data-target="#product_view" class="hidden-sm" data-placement="top" title="Add to wish list">
+            <i class="fa fa-search-plus"></i></a></div>
+            </div>
+		</div>
+		<div class="info">
+			<div class="row">
+				<div class="price-details col-md-6">
+					<p class="details">
+						Lorem ipsum dolor sit amet, consectetur..
+					</p>
+					<h2>EMERALD GREEN EMBROIDED BODICE </h2>
+					<!--<span class="price-new">$110.00</span>-->
+				</div>
+			</div>
+			<div class="separator clear-left">
+				<p class="btn-add padding-btop20">
+					<a href="#" class="hidden-sm"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+				</p>
+				<p class="btn-details padding-btop20">
+					<a href="#" class="hidden-sm" data-toggle="tooltip" data-placement="top" title="Add to wish list"><i class="fa fa-heart-o"></i></a>
+					<a href="#" class="hidden-sm" data-toggle="tooltip" data-placement="top" title="Compare"><i class="fa fa-exchange"></i></a>
+				</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		</article>
+        </div>
+         <div data-price="504" class="item">
+            <article class="col-item">
+		<div class="photo">
+			<a href="#"> <img src="images/lehnga9.jpg" alt="img12" class="img-responsive"> </a>
+            <div class="zoo_out">
+            <div class="zoom1">
+            <a href="#" data-toggle="modal" data-target="#product_view" class="hidden-sm" data-placement="top" title="Add to wish list">
+            <i class="fa fa-search-plus"></i></a></div>
+            </div>
+		</div>
+		<div class="info">
+			<div class="row">
+				<div class="price-details col-md-6">
+					<p class="details">
+						Lorem ipsum dolor sit amet, consectetur..
+					</p>
+					<h2>PEACH AND SILVER ANARKALI Lehnga</h2>
+					<!--<span class="price-new">$110.00</span>-->
+				</div>
+			</div>
+			<div class="separator clear-left">
+				<p class="btn-add padding-btop20">
+					<a href="#" class="hidden-sm"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+				</p>
+				<p class="btn-details padding-btop20">
+					<a href="#" class="hidden-sm" data-toggle="tooltip" data-placement="top" title="Add to wish list"><i class="fa fa-heart-o"></i></a>
+					<a href="#" class="hidden-sm" data-toggle="tooltip" data-placement="top" title="Compare"><i class="fa fa-exchange"></i></a>
+				</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		</article>
+        </div>
+        
+    </div>
+
+    </div>
+    <div class="row">
+    <div class="col-md-12 text-right"><nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav></div>
+    </div>
+    
+    </div>	
+    
+    
+	</div>
+</div></div>
+</section>
+
+
+<!--==================================================Footer==================================================-->
+<!--==================================================Footer end==================================================-->
+
+<footer class="footer pdding-top30">
+<div class="container">
+<div class="row">
+<div class="col-md-3 col-sm-3">
+<div class="pdding-btop20">
+<div style="max-width:300px;"><img src="images/large-logo.png" alt="" class="img-responsive" />
+<ul>
+<li><a href=""><i class="fa fa-home fa-1x"></i>Canada</a></li>
+<li><a href=""><i class="fa fa-envelope-o fa-1x"></i>info@finefabrics.ca</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<!--<div class="col-md-3 col-sm-3">
+<div class="pdding-btop20">
+<div class="gaping">
+<div><h2>My Account </h2></div>
+<ul>
+<li><a href="">My Account</a></li>
+<li><a href="">Order history</a></li>
+<li><a href="">Wishlist</a></li>
+<li><a href="">Privacy Policy</a></li>
+<li><a href="">Delivery Information</a></li>
+<li><a href="">Shopping Guide</a></li>
+</ul>
+</div>
+</div>
+</div>-->
+
+<div class="col-md-3 col-sm-3 col-md-offset-1">
+<div class="pdding-btop40">
+<ul>
+<li><a href="">Site Map</a></li>
+<!--<li><a href="">Store Location</a></li>-->
+<li><a href="">Privacy Policy</a></li>
+<li><a href="contact-us.php">Contact Us</a></li>
+</ul>
+</div>
+</div>
+
+<div class="col-md-5 col-sm-5 inputGroupContainer">
+<div class="pdding-top20 pdding-bot50">
+<div><h2>Subscribe Now</h2></div>
+<label  style="color:#FFFFFF; padding:8px 0px; font-weight:normal">Please enter your name, email to  receive 10% off in-store purchase.</label>
+    <form id="subsfooter_form" method="post" action="dynd.php">
+    <div class="form-group">
+    <div class="input-group">
+    <input id="subscriber_name"  name="subscriber_name" placeholder="Your name.." class="form-control"  type="text" required>
+    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+    </div>
+    </div> 
+    <div class="form-group">  
+    <div class="input-group">
+    <input  name="subscriber_email" id="subscriber_email" placeholder="Sign up for your email.." class="form-control"  type="email" required>
+    <span class="input-group-addon"><i class="fa fa-paper-plane"></i></span>
+    </div>
+    </div>  
+    <div class="form-group">  
+    
+    <input type="submit" value="Submit" class="btn btn-md  btn-danger">
+    <div id="fackdiv"></div>
+    
+    </div>
+     <input type="hidden" name="qry" id="qry" value="subscription" />
+    
+    </form>
+    
+ <div class="pdding-btop10"><h2>Follow Us </h2></div>  
+ <div class="social-icon pdding-btop20">
+ <ul>
+    <li class="facebook"><a href="" data-toggle="tooltip" title="Follow us on Facebook"><i class="fa  fa-facebook fa-3x"></i></a></li>
+    <li><a href="" data-toggle="tooltip" title="Follow us on Twitter"><i class="fa fa-twitter fa-3x"></i></a></li>
+    <li><a href="" data-toggle="tooltip" title="Follow us on Gmail"><i class="fa fa-envelope-o fa-3x"></i></a></li>
+    <li><a href="" data-toggle="tooltip" title="Follow us on Instagram"><i class="fa fa-instagram fa-3x"></i></a></li>
+<!-- <li><a href=""><i class="fa fa-linkedin fa-3x"></i></a></li>
+	<li><a href=""><i class="fa fa-paper-plane fa-3x"></i></a></li>
+     <li><a href=""><i class="fa fa-pinterest-p fa-3x"></i></a></li>
+     <li><a href=""><i class="fa  fa-youtube fa-3x"></i></a></li>-->
+ </ul>
+ </div> 
+</div>
+</div>
+
+</div>
+</div>
+<div class="bg-balack">
+<div class="container">
+<div class="row">
+<div class="col-md-5 text-md-left"><p>Copyright 2017@ finefabrics.ca .All Rights Reserved</p></div>
+<div class="col-md-5 col-md-offset-2 text-md-right">
+<p class=" text-md-right">Design By <a href="http://2020panacea.com/" target="_blank">2020panacea</a></p>
+<!--<ul>
+<li><a href=""><img src="images/viss-card.jpg" /></a></li>
+<li><a href=""><img src="images/master-card.jpg" /></a></li>
+<li><a href=""><img src="images/mestro-card.jpg" /></a></li>
+<li><a href=""><img src="images/american-card.jpg" /></a></li>
+<li><a href=""><img src="images/paypal.jpg" /></a></li>
+</ul>-->
+</div>
+</div>
+</div>
+</div>
+</footer><!--==================================================Footer Close==================================================-->
+
+
+    
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!--<script src="js/main.js"></script>
+<script src="js/custom.js"></script>-->
+<script>
+	$( document ).ready(function() {
+	$("[rel='tooltip']").tooltip();    
+	
+	$('.thumbnail').hover(
+	function(){
+	$(this).find('.caption').slideDown(250); //.fadeIn(250)
+	},
+	function(){
+	$(this).find('.caption').slideUp(250); //.fadeOut(205)
+	}
+	); 
+	});
+</script>
+
+ <script>
+ $(window).load(function(){
+      //Disply the modal popup
+        $('#myModal').modal('show');
+    });
+ </script>    
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+
+<script>
+   $(document).ready(function(){
+            //-- Click on detail
+            $("ul.menu-items > li").on("click",function(){
+                $("ul.menu-items > li").removeClass("active");
+                $(this).addClass("active");
+            })
+
+            $(".attr,.attr2").on("click",function(){
+                var clase = $(this).attr("class");
+
+                $("." + clase).removeClass("active");
+                $(this).addClass("active");
+            })
+
+            //-- Click on QUANTITY
+            $(".btn-minus").on("click",function(){
+                var now = $(".section > div > input").val();
+                if ($.isNumeric(now)){
+                    if (parseInt(now) -1 > 0){ now--;}
+                    $(".section > div > input").val(now);
+                }else{
+                    $(".section > div > input").val("1");
+                }
+            })            
+            $(".btn-plus").on("click",function(){
+                var now = $(".section > div > input").val();
+                if ($.isNumeric(now)){
+                    $(".section > div > input").val(parseInt(now)+1);
+                }else{
+                    $(".section > div > input").val("1");
+                }
+            })                        
+        }) 
+</script>
+<script>
+!function ($) {
+    
+    // Le left-menu sign
+    /* for older jquery version
+    $('#left ul.nav li.parent > a > span.sign').click(function () {
+        $(this).find('i:first').toggleClass("icon-minus");
+    }); */
+    
+    $(document).on("click","#left ul.nav li.parent > a > span.sign", function(){          
+        $(this).find('i:first').toggleClass("icon-minus");      
+    }); 
+    
+    // Open Le current menu
+    $("#left ul.nav li.parent.active > a > span.sign").find('i:first').addClass("icon-minus");
+    $("#left ul.nav li.current").parents('ul.children').addClass("in");
+
+}(window.jQuery);
+</script>
+
+<!--<script>
+$('.collapse').on('shown.bs.collapse', function(){
+$(this).parent().find(".glyphicon-plus").removeClass("glyphicon-plus").addClass("glyphicon-minus");
+}).on('hidden.bs.collapse', function(){
+$(this).parent().find(".glyphicon-minus").removeClass("glyphicon-minus").addClass("glyphicon-plus");
+});
+</script>-->
+
+<script>
+$(document).ready(function() {
+
+  $(".toggle-accordion").on("click", function() {
+    var accordionId = $(this).attr("accordion-id"),
+      numPanelOpen = $(accordionId + ' .collapse.in').length;
+    
+    $(this).toggleClass("active");
+
+    if (numPanelOpen == 0) {
+      openAllPanels(accordionId);
+    } else {
+      closeAllPanels(accordionId);
+    }
+  })
+
+  openAllPanels = function(aId) {
+    console.log("setAllPanelOpen");
+    $(aId + ' .panel-collapse:not(".in")').collapse('show');
+  }
+  closeAllPanels = function(aId) {
+    console.log("setAllPanelclose");
+    $(aId + ' .panel-collapse.in').collapse('hide');
+  }
+     
+});
+</script>
+
+<script>
+    $(function(){
+    $(".dropdown.open ").hover(            
+            function() {
+                $('.dropdown-menu', this).stop( true, true ).fadeIn("fast");
+                $(this).toggleClass('open');
+                $('b', this).toggleClass("caret caret-up");                
+            },
+            function() {
+                $('.dropdown-menu', this).stop( true, true ).fadeOut("fast");
+                $(this).toggleClass('open');
+                $('b', this).toggleClass("caret caret-up");                
+            });
+    });
+    
+</script>
+   <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery-ui.js"></script>
+<!--zoomer js-->
+	<!--<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>-->
+	<script type="text/javascript" src="js/smoothproducts.js"></script>
+	<script type="text/javascript">
+	/* wait for images to load */
+	$(window).load(function() {
+		$('.sp-wrap').smoothproducts();
+	});
+	</script>
+ 
+<!--zoomer js end-->
+<!--<script>
+$('ul.nav li.dropdown').hover(function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+}, function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+});
+</script>-->
+
+<!--<script>
+$('.nav > li.dropdown.open .dropdown-menu').hover(function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+}, function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+});
+</script> -->
+
+    <!--range slider script start-->
+  <script type="text/javascript">
+    $(document).ready(function () {
+        $(".sub > a").click(function() {
+            var ul = $(this).next(),
+                    clone = ul.clone().css({"height":"auto"}).appendTo(".mini-menu"),
+                    height = ul.css("height") === "0px" ? ul[0].scrollHeight + "px" : "0px";
+            clone.remove();
+            ul.animate({"height":height});
+            return false;
+        });
+           $('.mini-menu > ul > li > a').click(function(){
+           $('.sub a').removeClass('active');
+           $(this).addClass('active');
+        }),
+           $('.sub ul li a').click(function(){
+           $('.sub ul li a').removeClass('active');
+           $(this).addClass('active');
+        });
+    });
+</script>
+<script src="script.js" ></script>
+</html>
+<script>
+    $( function() {
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 1000,
+      values: [ 190, 728 ],
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+         var mi = ui.values[0];
+              var mx = ui.values[1];
+              filterSystem(mi, mx);
+      }
+    });
+    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+      " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+  } );
+
+
+  function filterSystem(minPrice, maxPrice) {
+      $(".items div.item").hide().filter(function () {
+          var price = parseInt($(this).data("price"), 10);
+          return price >= minPrice && price <= maxPrice;
+      }).show();
+  }
+  
+
+</script>
+<!--range slider script end-->
+  </body>
+</html>
