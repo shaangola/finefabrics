@@ -127,7 +127,7 @@ class Config
 	$this->host     = "localhost";  
 	$this->user     = "finefabr_webuser";
 	$this->password = "finefabr_webuser";
-	$this->database = "finefabr_webstore";		
+	$this->database = "finefabr_webstore";	
 	
 	
 	/*$this->host     = "localhost";  
