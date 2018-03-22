@@ -30,7 +30,47 @@
                                             <strong><span>Categories</span></strong>
                                         </div>
                                         <div class="block-content">
-                                            <ul id="categories_nav" class="nav-accordion nav-categories" style="">
+
+                                            <ul>
+                                                <?php 
+                                                $db_menu=new Database();    
+                                                $db_menu->open();
+                                                ?>
+                                                <?php
+                                                function fetchCategoryTree($parent = 0, $spacing = '', $user_tree_array = '') {
+
+                                                    if (!is_array($user_tree_array))
+                                                        $user_tree_array = array();
+
+                                                    $sql = "SELECT `category_id`, `name`, `parent` FROM `category` WHERE 1 AND `parent` = $parent ORDER BY category_id ASC";
+                                                    $db_menu->query($sql);
+                                                    
+                                                    if ($db_submenu->numRows() > 0) {
+                                                        while ($row = $db_menu->fetchArray()) {
+                                                            $user_tree_array[] = array("id" => $row['category_id'], "name" => $spacing . $row['name']);
+                                                            $user_tree_array = fetchCategoryTree($row['category_id'], $spacing . '&nbsp;&nbsp;', $user_tree_array);
+                                                        }
+                                                    }
+                                                    return $user_tree_array;
+                                                }
+                                                $return = fetchCategoryTree();
+                                                /*$query = mysql_query($sql);
+                                                
+                                                if (mysql_num_rows($query) > 0) {
+                                                    while ($row = mysql_fetch_object($query)) {
+                                                        $user_tree_array[] = array("id" => $row->category_id, "name" => $spacing . $row->name);
+                                                        $user_tree_array = fetchCategoryTree($row->category_id, $spacing . '&nbsp;&nbsp;', $user_tree_array);
+                                                    }
+                                                }*/
+
+                                                /*$res = fetchCategoryTreeList();
+                                                foreach ($res as $r) {
+                                                    echo  $r;
+                                                }*/
+                                                ?>
+                                            </ul>
+
+                                            <?php /* <ul id="categories_nav" class="nav-accordion nav-categories" style="">
                                                 <li class="level0 nav-1 active level-top first parent">
                                                     <a href="fashion.html" class="level-top">
                                                         <span>STYLE</span>
@@ -102,7 +142,7 @@
                                                         </li>
                                                     </ul>
                                                 </li>
-                                            </ul>
+                                            </ul> */ ?>
                                         </div>
                                     </div>
                                 </div>

@@ -13,9 +13,18 @@ $db_submenu->open();
 				<div class="content1">Dashboard</div>
 			</div>
 		</a>
-		<div class="navi submenu">
-			<a href="index.php"><img src="images/menu/home.png"  width="16" height="16"/>&nbsp;Home</a>
-			
+		<div class="navi submenu">			
+			<ul style="list-style-type:none">
+				<li><a href="index.php"><img src="images/menu/home.png"  width="16" height="16"/>&nbsp;Home</a></li>
+				<li>
+					<a href="all-products.php"><img src="images/menu/home.png"  width="16" height="16"/>&nbsp;Product</a>
+					<ul>
+						<li><a href="all-products.php">&nbsp;All Products</a></li>
+						<li><a href="add-new-product.php">&nbsp;Add New</a></li>
+						<li><a href="category.php">&nbsp;Categories</a></li>
+					</ul>
+				</li>
+			</ul>			
 		</div>
 	</div>
 	
