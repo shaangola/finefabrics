@@ -1,3 +1,12 @@
+<?php
+require_once("inc/config.inc.php");
+require_once("inc/database.inc.php");
+
+$db = new Database();   
+$db->open();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -110,96 +119,39 @@ LEVEL<!--Final Stock Clearance Sale 30-80% off IN -STORE MAIN LEVEL--></h4></div
 <!--=================================================================slider -section- Close-=============================================================================-->
 
 <section class="pdding-top80">
-<!--===============headdin start============================-->
-<div class="tittle-heading">
-<h1>Our Selection</h1>
-<div class="heading-bar"></div>
-</div>
-<!--===============headdin end============================-->
+    <!--===============headdin start============================-->
+    <div class="tittle-heading">
+        <h1>Our Selection</h1>
+        <div class="heading-bar"></div>
+    </div>
+    <!--===============headdin end============================-->
     <div class="row">
-    <div class="container">
-    <div class="col-lg-4 col-md-4 col-xs-6 thumb">
-    <div class="grid">
-    <figure class="effect-lily">
-    <img src="images/pic4.jpg" alt="img12" class="img-responsive" />
-    <figcaption>
-    <div>
-    <h2>Wedding</h2>
+        <div class="container">
+            <?php 
+            $sql    = "SELECT * FROM category where parent_category=0 order by category_id ASC";
+            $db->query($sql);
+            $rows   = $db->numRows();
+            if($rows>0){
+                while($rsdata = $db->fetchAssoc()){ ?>
+                    <div class="col-lg-4 col-md-4 col-xs-6 thumb">
+                        <div class="grid">
+                            <a href="product-category.php?_pcat=<?php echo $rsdata['category_id'];?>">
+                                <figure class="effect-lily">
+                                    <img src="images/<?php echo strtolower($rsdata['name']);?>.jpg" alt="img12" class="img-responsive" />
+                                    <figcaption>
+                                        <div>
+                                            <h2><?php echo $rsdata['name'];?></h2>
+                                        </div>
+                                    </figcaption>			
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                <?php 
+                }
+            }?>            
+        </div>
     </div>
-    </figcaption>			
-    </figure>
-    </div>
-    </div>
-    
-    <div class="col-lg-4 col-md-4 col-xs-6 thumb">
-    <div class="grid">
-    <figure class="effect-lily">
-    <img src="images/pic2.jpg" alt="img12" class="img-responsive" />
-    <figcaption>
-    <div>
-    <h2>Women</h2>
-    </div>
-    </figcaption>			
-    </figure>
-    </div>
-    </div>
-    
-    <div class="col-lg-4 col-md-4 col-xs-6 thumb">
-    <div class="grid">
-    <figure class="effect-lily">
-    <img src="images/pic3.jpg" alt="img12" class="img-responsive" />
-    <figcaption>
-    <div>
-    <h2>Men</h2>
-    </div>
-    </figcaption>			
-    </figure>
-    </div>
-    </div>
-    
-    
-   
-
-
-    <div class="col-lg-4 col-md-4 col-xs-6 thumb">
-    <div class="grid">
-    <figure class="effect-lily">
-    <img src="images/pic1.jpg" alt="img12" class="img-responsive" />
-    <figcaption>
-    <div>
-    <h2>Jewellery</h2>
-    </div>
-    </figcaption>			
-    </figure>
-    </div>
-    </div>
-    
-    <div class="col-lg-4 col-md-4 col-xs-6 thumb">
-    <div class="grid">
-    <figure class="effect-lily">
-    <img src="images/pic6.jpg" alt="img12" class="img-responsive" />
-    <figcaption>
-    <div>
-    <h2>Children</h2>
-    </div>
-    </figcaption>			
-    </figure>
-    </div>
-    </div>
-    
-    <div class="col-lg-4 col-md-4 col-xs-6 thumb">
-    <div class="grid">
-    <figure class="effect-lily">
-    <img src="images/pic5.jpg" alt="img12" class="img-responsive" />
-    <figcaption>
-    <div>
-    <h2>ACCESSORIES</h2>
-    </div>
-    </figcaption>			
-    </figure>
-    </div>
-    </div>
-</div></div>
 </section>
 
 <!--==================================================Advertisemetn Section start==================================================-->

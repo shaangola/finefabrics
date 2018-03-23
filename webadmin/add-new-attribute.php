@@ -1,4 +1,6 @@
-<?php require_once("config.php"); ?>
+<?php require_once("config.php"); 
+$db = new Database();   
+$db->open();?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -27,46 +29,41 @@
                     <div id="rightbody">
                         <?php include("header.php"); ?>
                         <div class="rightbodysec">
-                            <h1>Add new category</h1>
+                            <h1>Add new Attribute</h1>
                         </div>
 
                         <div class="container">
-                            <form class="form-horizontal" action="category.php">
+                            <form class="form-horizontal" action="attribute.php">
                                 <div class="form-group">
                                     <label class="control-label col-sm-2" for="email">Name:</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="category_name" name="category_name">
+                                        <input type="text" class="form-control" id="attribute_name" name="attribute_name">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="control-label col-sm-2" for="pwd">Parent category</label>
                                     <div class="col-sm-10">          
-                                        <select name="parent_category">
+                                        <select name="parent_id">
                                             <option value="0">None</option>
+                                            <?php 
+                                            $sql    = "SELECT * FROM attribute order by attribute_id ASC";
+                                            $db->query($sql);
+                                            $rows   = $db->numRows();
+                                            if($rows>0) {
+                                                while($rsdata = $db->fetchAssoc()){ ?>
+                                                    <option value="<?php echo $rsdata['attribute_id'];?>"><?php echo $rsdata['name'];?></option>
+                                                <?php }
+                                            } else { ?>
+                                                <option value="0">None</option>
+                                            <?php } ?>
                                         </select>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="control-label col-sm-2" for="pwd">Display Type</label>        
-                                    <div class="col-sm-10">          
-                                        <select name="display_type">
-                                            <option value="1">Category</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="control-label col-sm-2" for="pwd">Thumbnail</label>
-                                    <div class="col-sm-10">          
-                                        <input type="file" name="category_image" value="">
                                     </div>
                                 </div>
 
                                 <div class="form-group">        
                                     <div class="col-sm-offset-2 col-sm-10">
-                                        <button type="submit" name="save-category" class="btn btn-default" value="yes">Add new category</button>
+                                        <button type="submit" name="save-attribute" class="btn btn-default" value="yes">Add new attribbute</button>
                                     </div>
                                 </div>
                             </form>

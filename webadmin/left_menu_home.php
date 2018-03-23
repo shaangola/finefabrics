@@ -22,6 +22,7 @@ $db_submenu->open();
 						<li><a href="all-products.php">&nbsp;All Products</a></li>
 						<li><a href="add-new-product.php">&nbsp;Add New</a></li>
 						<li><a href="category.php">&nbsp;Categories</a></li>
+						<li><a href="attribute.php">&nbsp;Attribute</a></li>
 					</ul>
 				</li>
 			</ul>			

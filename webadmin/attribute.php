@@ -25,8 +25,8 @@
                     <div id="rightbody">
                         <?php include("header.php"); ?>
                         <div class="rightbodysec">
-                            <h1>Products</h1>
-                            <span><a href="add-new-product.php">Add new product</a></span>
+                            <h1>Attribute</h1>
+                            <span><a href="add-new-attribute.php">Add new attribute</a></span>
                         </div>
 
                         <div>
@@ -38,29 +38,25 @@
                                 <tr>
                                     <td><input type="checkbox" name=""></td>
                                     <td><strong>Name</strong></td>
-                                    <td><strong>Description</strong></td>
-                                    <td><strong>Price</strong></td>
                                     <td><strong>Action</strong></td>
                                 </tr>
                                 
                                 
                                 <?php 
-                                $sql    = "SELECT * FROM product order by product_id DESC";
+                                $sql    = "SELECT * FROM attribute order by attribute_id ASC";
                                 $db->query($sql);
                                 $rows   = $db->numRows();
                                 if($rows>0){
                                     while($rsdata = $db->fetchAssoc()){ ?>
                                     <tr>
-                                        <td><input type="checkbox" name="" value="<?php echo $rsdata['product_id'];?>"></td>
+                                        <td><input type="checkbox" name="" value="<?php echo $rsdata['attribute_id'];?>"></td>
                                         <td><?php echo $rsdata['name'];?></td>
-                                        <td><?php echo $rsdata['description'];?></td>
-                                        <td><?php echo $rsdata['price'];?></td>
                                         <td>Edit | Delete</td>
                                     </tr>
                                 <?php }
                                 }else{ ?>
                                     <tr>
-                                        <td colspan="5">No Records Found</td>
+                                        <td colspan="3">No Records Found</td>
                                     </tr>
                                 <?php } ?>
                                 
