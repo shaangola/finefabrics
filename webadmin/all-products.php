@@ -26,7 +26,7 @@
                         <?php include("header.php"); ?>
                         <div class="rightbodysec">
                             <h1>Products</h1>
-                            <span><a href="add-new-category.php">Add new product</a></span>
+                            <span><a href="add-new-product.php">Add new product</a></span>
                         </div>
 
                         <div>
@@ -45,22 +45,22 @@
                                 
                                 
                                 <?php 
-                                $sql    = "SELECT * FROM category where parent_category=0 order by category_id DESC";
+                                $sql    = "SELECT * FROM product order by product_id DESC";
                                 $db->query($sql);
                                 $rows   = $db->numRows();
                                 if($rows>0){
                                     while($rsdata = $db->fetchAssoc()){ ?>
                                     <tr>
-                                        <td><input type="checkbox" name="" value="<?php echo $rsdata['category_id'];?>"></td>
-                                        <td><?php echo $rsdata['image'];?></td>
+                                        <td><input type="checkbox" name="" value="<?php echo $rsdata['product_id'];?>"></td>
                                         <td><?php echo $rsdata['name'];?></td>
-                                        <td>0</td>
+                                        <td><?php echo $rsdata['description'];?></td>
+                                        <td><?php echo $rsdata['price'];?></td>
                                         <td>Edit | Delete</td>
                                     </tr>
                                 <?php }
                                 }else{ ?>
                                     <tr>
-                                        <td colspan="3">No Records Found</td>
+                                        <td colspan="5">No Records Found</td>
                                     </tr>
                                 <?php } ?>
                                 

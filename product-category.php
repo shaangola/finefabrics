@@ -1,3 +1,15 @@
+<?php
+require_once("inc/config.inc.php");
+require_once("inc/database.inc.php");
+
+$db = new Database();   
+$db->open();
+
+$dba = new Database();   
+$dba->open();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -18,177 +30,166 @@
                 <div class="heading-bar"></div>
             </div>
             <!--===============headdin end============================-->
-            <div class="row">
-                <div class="container">
+            <div class="pdding-top80 topbar-of-products">
+                <div class="row">
+                    <div class="container">
 
-                    <div class="col-sm-12">
-                        <div class="col-sm-4">
-                            <div class="col-lg-3  sidebar">
-                                <div class="col-left">
-                                    <div class="block block-nav">
-                                        <div class="block-title">
-                                            <strong><span>Categories</span></strong>
-                                        </div>
-                                        <div class="block-content">
+                        <div class="col-sm-12">
 
-                                            <ul>
-                                                <?php 
-                                                $db_menu=new Database();    
-                                                $db_menu->open();
-                                                ?>
-                                                <?php
-                                                function fetchCategoryTree($parent = 0, $spacing = '', $user_tree_array = '') {
+                            <!-- /////new accordian added///////-->         
+                            <div class="col-sm-4">
 
-                                                    if (!is_array($user_tree_array))
-                                                        $user_tree_array = array();
+                                <div class="categories-block">
+                                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
-                                                    $sql = "SELECT `category_id`, `name`, `parent` FROM `category` WHERE 1 AND `parent` = $parent ORDER BY category_id ASC";
-                                                    $db_menu->query($sql);
+                                        <?php 
+                                        $sql    = "SELECT * FROM attribute WHERE parent_id = 0 order by attribute_id ASC";
+                                        $db->query($sql);
+                                        $rows   = $db->numRows();
+                                        if($rows>0){
+                                            while($rsdata = $db->fetchAssoc()){ ?>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading" role="tab" id="heading<?php echo $rsdata['attribute_id']; ?>">
+                                                        <h4 class="panel-title">
+                                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $rsdata['attribute_id']; ?>" aria-expanded="true" aria-controls="collapseOne">
+                                                                <i class="more-less glyphicon glyphicon-plus"></i>
+                                                                <?php echo $rsdata['name']; ?>
+                                                            </a>
+                                                        </h4>
+                                                    </div>
                                                     
-                                                    if ($db_submenu->numRows() > 0) {
-                                                        while ($row = $db_menu->fetchArray()) {
-                                                            $user_tree_array[] = array("id" => $row['category_id'], "name" => $spacing . $row['name']);
-                                                            $user_tree_array = fetchCategoryTree($row['category_id'], $spacing . '&nbsp;&nbsp;', $user_tree_array);
-                                                        }
-                                                    }
-                                                    return $user_tree_array;
-                                                }
-                                                $return = fetchCategoryTree();
-                                                /*$query = mysql_query($sql);
-                                                
-                                                if (mysql_num_rows($query) > 0) {
-                                                    while ($row = mysql_fetch_object($query)) {
-                                                        $user_tree_array[] = array("id" => $row->category_id, "name" => $spacing . $row->name);
-                                                        $user_tree_array = fetchCategoryTree($row->category_id, $spacing . '&nbsp;&nbsp;', $user_tree_array);
-                                                    }
-                                                }*/
+                                                    <div id="collapse<?php echo $rsdata['attribute_id']; ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                                        <div class="panel-body">
+                                                            <?php 
+                                                            $sqla    = "SELECT * FROM attribute WHERE parent_id = '".$rsdata['attribute_id']."' order by attribute_id ASC";
+                                                            $dba->query($sqla);
+                                                            $rowsa   = $dba->numRows();
+                                                            if($rowsa>0){  ?>
+                                                                <ul class="level0">
+                                                                    <?php
+                                                                    $count = 0;
+                                                                    while($rsdataa = $dba->fetchAssoc()){ 
+                                                                        $class = '';
+                                                                        if($count == 0){
+                                                                            $class= 'first'; 
+                                                                        }else if($count == $rowsa){
+                                                                            $class= 'last'; 
+                                                                        }?>
 
-                                                /*$res = fetchCategoryTreeList();
-                                                foreach ($res as $r) {
-                                                    echo  $r;
-                                                }*/
-                                                ?>
-                                            </ul>
+                                                                        <li class="level1 item nav-1-<?php echo $rsdataa['attribute_id'];?> <?php echo $class;?>">
+                                                                            <a href="#">
+                                                                                <span><?php echo $rsdataa['name'];?></span>
+                                                                            </a>
+                                                                        </li>
 
-                                            <?php /* <ul id="categories_nav" class="nav-accordion nav-categories" style="">
-                                                <li class="level0 nav-1 active level-top first parent">
-                                                    <a href="fashion.html" class="level-top">
-                                                        <span>STYLE</span>
-                                                    </a><span class="collapse">collapse</span>
-                                                    <ul class="level0">
-                                                        <li class="level1 item nav-1-1 first">
-                                                            <a href="#">
-                                                                <span>ANARKALI</span>
-                                                            </a>
-                                                        </li>
-                                                        <li class="level1 item nav-1-2">
-                                                            <a href="#">
-                                                                <span>ANARKALI SUIT</span>
-                                                            </a>
-                                                        </li>
-                                                        <li class="level1 item nav-1-3">
-                                                            <a href="#">
-                                                                <span>BRIDAL LEHANGA</span>
-                                                            </a>
-                                                        </li>
-                                                        <li class="level1 item nav-1-4 last">
-                                                            <a href="#">
-                                                                <span>SALWAR KAMEEZ</span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li class="level0 nav-2 level-top parent">
-                                                    <a href="occasion.html" class="level-top">
-                                                        <span>OCCASION</span>
-                                                    </a><span class="collapse">collapse</span>
-                                                    <ul class="level0">
-                                                        <li class="level1 item nav-2-1 first">
-                                                            <a href="occasion/cocktail.html">
-                                                                <span>COCKTAIL</span>
-                                                            </a>
-                                                        </li>
-                                                        <li class="level1 item nav-2-2">
-                                                            <a href="occasion/dinner-party.html">
-                                                            <span>DINNER PARTY</span>
-                                                            </a>
-                                                        </li>
-                                                        <li class="level1 item nav-2-3">
-                                                            <a href="occasion/mehendi.html">
-                                                                <span>MEHENDI</span>
-                                                            </a>
-                                                        </li>
-                                                        <li class="level1 item nav-2-4 last">
-                                                            <a href="occasion/wedding-day.html">
-                                                            <span>WEDDING DAY</span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li class="level0 nav-3 level-top last parent">
-                                                    <a href="role.html" class="level-top">
-                                                        <span>ROLE</span>
-                                                    </a><span class="collapse">collapse</span>
-                                                    <ul class="level0">
-                                                        <li class="level1 item nav-3-1 first">
-                                                            <a href="role/best-friend.html">
-                                                                <span>BEST FRIEND</span>
-                                                            </a>
-                                                        </li>
-                                                        <li class="level1 item nav-3-2">
-                                                            <a href="role/bride.html">
-                                                                <span>BRIDE</span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul> */ ?>
-                                        </div>
+                                                                        <?php
+                                                                    $count++; 
+                                                                    }?>
+                                                                </ul>
+                                                            <?php } ?>                                                            
+                                                        </div>
+                                                    </div>                                                        
+                                                </div>
+                                        <?php }
+                                        } ?>    
+
                                     </div>
                                 </div>
-                            </div>    
-                        </div>
-
-                        <div class="col-sm-8">
-                            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
-                                <div class="grid">
-                                    <figure class="effect-lily">
-                                        <img src="images/pic4.jpg" alt="img12" class="img-responsive" />
-                                        <p><span>Image-1</span></p>
-                                        <p><span>10</span></p>
-                                    </figure>
-                                </div>
                             </div>
+                            <!--  //////////////END//////////-->
 
-                            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
-                                <div class="grid">
-                                    <figure class="effect-lily">
-                                        <img src="images/pic2.jpg" alt="img12" class="img-responsive" />
-                                        <p><span>Image-2</span></p>
-                                        <p><span>20</span></p>          
-                                    </figure>
-                                </div>
+
+
+                            <div class="col-sm-8">
+                                <!--  //////////////header strip above product display block//////////-->
+
+                                <nav class="navbar navbar-default">                  
+                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                        <ul class="nav navbar-nav">
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SORT BY: POSITION <span class="caret"></span></a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">Position</a></li>
+                                                    <li><a href="#">Size</a></li>
+                                                     <li><a href="#">Style</a></li>
+                                                     <li><a href="#">Color</a></li>
+                                                    <li><a href="#">Name</a></li>
+                                                    <li><a href="#">Price</a></li>                                                     
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">150 ITEMS/PAGE <span class="caret"></span></a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">50</a></li>
+                                                    <li><a href="#">100</a></li>
+                                                    <li><a href="#">150</a></li>                                                  
+                                                </ul>
+                                            </li>
+                                        </ul>
+
+                                        <ul class="nav navbar-nav navbar-right">
+                                            <li class="active"><a href="#"><span class="glyphicon glyphicon-th"></span> <span class="sr-only">(current)</span></a></li>
+                                            <li><a href="#"><span class="glyphicon glyphicon-th-list"></span></a></li>
+
+                                        </ul>
+                                    </div><!-- /.navbar-collapse -->                                 
+                                </nav>
+
+                                <?php if(isset($_REQUEST['_pcat'])) {
+                                    $sql = "SELECT * FROM product where p_link='".$_REQUEST['_pcat']."' order by product_id ASC";
+                                    $db->query($sql);
+                                    $rows   = $db->numRows();
+                                    if($rows>0){
+                                        while($rsdata = $db->fetchAssoc()){ ?>
+
+                                            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
+                                                <div class="grid">
+                                                    <figure class="effect-lily">
+                                                        <img src="upload/<?php echo $rsdata['image'];?>" alt="<?php echo $rsdata['image'];?>" class="img-responsive" />
+                                                        <p><span><?php echo $rsdata['image'];?></span></p>
+                                                        <p><span><?php echo $rsdata['price'];?></span></p>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                <?php   }
+                                    }
+                                } ?>
+                                <!--  //////////////END//////////-->
                             </div>
+                        </div>                   
 
-                            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
-                                <div class="grid">
-                                    <figure class="effect-lily">
-                                        <img src="images/pic3.jpg" alt="img12" class="img-responsive" />
-                                        <p><span>Image-3</span></p>
-                                        <p><span>30</span></p>          
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>                   
-
-                </div>        
+                    </div>        
+                </div>
             </div>
         </section>
 
-<!--==================================================Footer Close==================================================-->
+        <!--==================================================Footer Close==================================================-->
 
 
         <?php include_once("fffooter.php");?>
+
+        <!--/*******************************
+Script for left side categories panel
+*******************************/-->
+
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+
+        <script>
+            function toggleIcon(e) {
+                $(e.target)
+                    .prev('.panel-heading')
+                    .find(".more-less")
+                    .toggleClass('glyphicon-plus glyphicon-minus');
+            }
+            $('.panel-group').on('hidden.bs.collapse', toggleIcon);
+            $('.panel-group').on('shown.bs.collapse', toggleIcon);
+        </script>
+
+        <!--/*******************************
+End
+*******************************/-->
+
     </body>
 </html>
