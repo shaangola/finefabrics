@@ -52,10 +52,7 @@
                                     <label class="control-label col-sm-2" for="pwd">Display Type</label>        
                                     <div class="col-sm-10">          
                                         <select name="display_type">
-                                            <option value="0">Default</option>
-                                            <option value="1">Products</option>
-                                            <option value="2">Subcategories</option>
-                                            <option value="3">Both</option>
+                                            <option value="1">Category</option>
                                         </select>
                                     </div>
                                 </div>

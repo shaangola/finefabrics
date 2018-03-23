@@ -25,7 +25,7 @@
                     <div id="rightbody">
                         <?php include("header.php"); ?>
                         <div class="rightbodysec">
-                            <h1>Category</h1>
+                            <h1>Products</h1>
                             <span><a href="add-new-category.php">Add new product</a></span>
                         </div>
 
@@ -37,9 +37,9 @@
                                 
                                 <tr>
                                     <td><input type="checkbox" name=""></td>
-                                    <td><strong>Image</strong></td>
                                     <td><strong>Name</strong></td>
-                                    <td><strong>Count</strong></td>
+                                    <td><strong>Description</strong></td>
+                                    <td><strong>Price</strong></td>
                                     <td><strong>Action</strong></td>
                                 </tr>
                                 

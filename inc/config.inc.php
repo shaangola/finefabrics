@@ -16,6 +16,7 @@ define("_PANEL_NAME",   "CRM :: Fine Fabrics");
 define("_DB_PREFIX",    "max_");
 
 define("_SITE_URL_",    "http://finefabrics.ca/");
+// define("_SITE_URL_",    "http://localhost/finefabrics/");
 //define("_HTTP_HOST_",    "http://localhost/development/maxpure.in/");
 
 define("_MAX_ATTRIBUTE_",    "10");
@@ -127,7 +128,13 @@ class Config
 	$this->host     = "localhost";  
 	$this->user     = "finefabr_webuser";
 	$this->password = "finefabr_webuser";
-	$this->database = "finefabr_webstore";		
+	$this->database = "finefabr_webstore";
+
+
+	/*$this->host     = "localhost";  
+	$this->user     = "root";
+	$this->password = "";
+	$this->database = "finefabr_webstore";	*/	
 	
 	
 	/*$this->host     = "localhost";  
